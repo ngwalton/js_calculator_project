@@ -48,7 +48,14 @@ clear.addEventListener('click', () => {
 enter.addEventListener('click', () => {
     // test that not all chars are non-numbers
     if (/\d/.test(display.value)) {
-        if (eval(display.value) || eval(display.value) === 0) {
+        percentPattern = /^\d+(\.\d+)?%([+-\/\*]\d+(\.\d+)?%)+$/;
+        isPercent = percentPattern.test(display.value.replaceAll(' ', ''));
+        if (isPercent) {
+            tmp = display.value.replaceAll('%', '')
+            display.value = eval(tmp) + '%';
+
+            clearInput = true;
+        } else if (eval(display.value) || eval(display.value) === 0) {
             display.value = eval(display.value);
             clearInput = true;
         }
