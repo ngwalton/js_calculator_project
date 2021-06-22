@@ -1,0 +1,22 @@
+{
+  "name": "js_calculator_project",
+  "version": "1.0.0",
+  "description": "Practice project with express and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngwalton/js_calculator_project.git"
+  },
+  "author": "Nicholas Walton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngwalton/js_calculator_project/issues"
+  },
+  "homepage": "https://github.com/ngwalton/js_calculator_project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
