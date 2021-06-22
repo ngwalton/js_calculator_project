@@ -1,0 +1,29 @@
+button {
+    width: 6rem;
+    height: 3rem;
+}
+
+#entry {
+    width: 100%;
+    box-sizing: border-box;  /*without this, input is wider then keys*/
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+#desc {
+    margin-bottom: 4rem;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text {
+    margin-left: 20%;
+}
+
+/* #enter {
+    background-color: blue;
+} */
