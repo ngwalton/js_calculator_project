@@ -4,7 +4,7 @@ const enter = document.querySelector('#enter');
 const numKeys = document.querySelectorAll('.valKey');
 let clearInput = false;
 
-// restric input function
+// restrict input function
 // based on https://stackoverflow.com/a/469362/12446618
 function setInputFilter(textbox, inputFilter) {
     ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"]
@@ -24,7 +24,7 @@ function setInputFilter(textbox, inputFilter) {
         });
 }
 
-// Allow digits and manth chars, currently excluding "!"
+// Allow digits and math chars, currently excluding "!"
 setInputFilter(display, function (value) {
     return /^[\d\.+-\/\*%]*$/.test(value);
 });
