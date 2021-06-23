@@ -49,9 +49,11 @@ table {
     margin-right: auto;
 }
 
-#text {
-    margin-left: 20%;
-    margin-right: 20%;
+@media screen and (min-width: 900px) {
+    #text {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 
 h1 {
