@@ -61,7 +61,7 @@ enter.addEventListener('click', () => {
             display.value = eval(display.value);
             clearInput = true;
         }
-    } else {  // if entery is just symbols, clean input
+    } else {  // if entery is just symbols, clear input
         display.value = null; // clear.click() was returning undefined?
     }
 });
