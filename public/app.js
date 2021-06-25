@@ -1,3 +1,5 @@
+"use strict"
+
 const keys = document.querySelectorAll('button');
 const display = document.querySelector('#display');
 const enter = document.querySelector('#enter');
@@ -29,7 +31,7 @@ setInputFilter(display, function (value) {
     return /^[\d\.+-\/\*%]*$/.test(value);
 });
 
-for (key of numKeys) {
+for (let key of numKeys) {
     key.addEventListener('click', function () {
         if (clearInput) {
             display.value = this.textContent;
@@ -48,10 +50,10 @@ clear.addEventListener('click', () => {
 enter.addEventListener('click', () => {
     // test that not all chars are non-numbers
     if (/\d/.test(display.value)) {
-        percentPattern = /^\d+(\.\d+)?%([+-\/\*]\d+(\.\d+)?%)+$/;
-        isPercent = percentPattern.test(display.value.replaceAll(' ', ''));
+        const percentPattern = /^\d+(\.\d+)?%([+-\/\*]\d+(\.\d+)?%)+$/;
+        const isPercent = percentPattern.test(display.value.replaceAll(' ', ''));
         if (isPercent) {
-            tmp = display.value.replaceAll('%', '')
+            const tmp = display.value.replaceAll('%', '')
             display.value = eval(tmp) + '%';
 
             clearInput = true;
